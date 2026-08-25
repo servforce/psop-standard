@@ -1,0 +1,29 @@
+# Normalize line endings on commit; check out platform-appropriate endings.
+* text=auto eol=lf
+
+# Shell scripts must stay LF or they break in WSL/Linux.
+*.sh text eol=lf
+
+# PowerShell scripts stay CRLF for Windows.
+*.ps1 text eol=crlf
+
+# Explicit text files
+*.py   text eol=lf
+*.js   text eol=lf
+*.css  text eol=lf
+*.html text eol=lf
+*.sql  text eol=lf
+*.md   text eol=lf
+*.toml text eol=lf
+*.txt  text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# Binary files: never convert
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.svg  text eol=lf
+*.ico  binary
+*.pt   binary

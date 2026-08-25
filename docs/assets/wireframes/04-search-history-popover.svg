@@ -1,0 +1,79 @@
+<svg width="1000" height="720" viewBox="0 0 1000 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="720" fill="#F7F8FA"/>
+  <rect x="28" y="64" width="36" height="36" rx="18" fill="#FFFFFF" stroke="#AEB8C8"/>
+  <path d="M48 76 41 82l7 6M41 82h14" stroke="#2F6FED" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="80" y="56" width="760" height="48" rx="6" fill="#FFFFFF" stroke="#AEB8C8"/>
+  <text x="104" y="86" fill="#7A8494" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">输入作业场景、对象、工序、风险点，检索相关标准</text>
+  <rect x="856" y="56" width="64" height="48" rx="6" fill="#2F6FED"/>
+  <text x="874" y="86" fill="white" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">检索</text>
+
+  <text x="80" y="166" fill="#202631" font-size="22" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">标准检索结果</text>
+  <text x="80" y="196" fill="#5B6575" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif">共 <tspan fill="#2F6FED" font-weight="700">18</tspan> 条检索结果，检索时间：2026/8/12 15:45:23</text>
+  <rect x="804" y="158" width="116" height="36" rx="6" fill="#2F6FED"/>
+  <text x="826" y="181" fill="white" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif">检索历史</text>
+
+  <rect x="80" y="230" width="840" height="348" rx="6" fill="#FCFCFD" stroke="#D8DEE8"/>
+  <text x="104" y="286" fill="#3C4656" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">序号</text>
+  <text x="166" y="286" fill="#3C4656" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">标准号</text>
+  <text x="286" y="286" fill="#3C4656" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">标准名称</text>
+  <text x="550" y="286" fill="#3C4656" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">来源</text>
+  <text x="632" y="286" fill="#3C4656" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">分类</text>
+  <text x="724" y="286" fill="#3C4656" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">发布日期</text>
+  <text x="818" y="286" fill="#3C4656" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">实施日期</text>
+  <text x="884" y="286" fill="#3C4656" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">得分</text>
+  <line x1="100" y1="302" x2="900" y2="302" stroke="#E4E8F0"/>
+
+  <rect x="92" y="310" width="816" height="34" rx="4" fill="#EAF3FF"/>
+  <text x="104" y="332" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">1</text>
+  <text x="166" y="332" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">GB/T 0001</text>
+  <text x="286" y="332" fill="#202631" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">标准名称示例一</text>
+  <text x="550" y="332" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">国家标准</text>
+  <text x="632" y="332" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">推荐性</text>
+  <text x="724" y="332" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">2026-07-01</text>
+  <text x="818" y="332" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">2026-08-01</text>
+  <text x="884" y="332" fill="#2F6FED" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">0.92</text>
+  <line x1="100" y1="350" x2="900" y2="350" stroke="#EEF1F5"/>
+
+  <text x="104" y="380" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">2</text>
+  <text x="166" y="380" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">HJ 0002</text>
+  <text x="286" y="380" fill="#202631" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">标准名称示例二</text>
+  <text x="550" y="380" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">国家标准</text>
+  <text x="632" y="380" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">强制性</text>
+  <text x="724" y="380" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">2025-12-01</text>
+  <text x="818" y="380" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">2026-01-01</text>
+  <text x="884" y="380" fill="#2F6FED" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">0.87</text>
+  <line x1="100" y1="398" x2="900" y2="398" stroke="#EEF1F5"/>
+
+  <text x="104" y="428" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">3</text>
+  <text x="166" y="428" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">DB 0003</text>
+  <text x="286" y="428" fill="#202631" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">标准名称示例三</text>
+  <text x="550" y="428" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">地方标准</text>
+  <text x="632" y="428" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">浙江</text>
+  <text x="724" y="428" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">2026-07-18</text>
+  <text x="818" y="428" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">2026-08-18</text>
+  <text x="884" y="428" fill="#2F6FED" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">0.81</text>
+
+  <rect x="648" y="122" width="258" height="360" rx="10" fill="#FFFFFF" stroke="#D8DEE8"/>
+  <rect x="648" y="122" width="258" height="44" rx="10" fill="#FFFFFF"/>
+  <text x="668" y="151" fill="#202631" font-size="16" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">检索历史</text>
+  <path d="M876 136l-8 8m8 0-8-8" stroke="#7A8494" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="668" y1="166" x2="886" y2="166" stroke="#E4E8F0"/>
+  <rect x="888" y="174" width="4" height="296" rx="2" fill="#E0E5EF"/>
+  <rect x="888" y="208" width="4" height="72" rx="2" fill="#B7C2D4"/>
+
+  <rect x="668" y="186" width="210" height="36" rx="6" fill="#F2F4F8" stroke="#D8DEE8"/>
+  <text x="684" y="210" fill="#202631" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">吊装作业 风险点 防坠落</text>
+  <text x="844" y="210" fill="#7A8494" font-size="12" font-family="Arial, 'Microsoft YaHei', sans-serif">15:45</text>
+
+  <text x="668" y="250" fill="#202631" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">有限空间作业 通风 检测</text>
+  <text x="844" y="250" fill="#7A8494" font-size="12" font-family="Arial, 'Microsoft YaHei', sans-serif">14:12</text>
+  <line x1="668" y1="262" x2="886" y2="262" stroke="#EEF1F5"/>
+
+  <text x="668" y="296" fill="#202631" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">高处作业 安全带 临边防护</text>
+  <text x="844" y="296" fill="#7A8494" font-size="12" font-family="Arial, 'Microsoft YaHei', sans-serif">11:06</text>
+  <line x1="668" y1="308" x2="886" y2="308" stroke="#EEF1F5"/>
+
+  <text x="668" y="342" fill="#202631" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">pgvector 相似度计算方法</text>
+  <text x="844" y="342" fill="#7A8494" font-size="12" font-family="Arial, 'Microsoft YaHei', sans-serif">10:28</text>
+  <line x1="668" y1="354" x2="886" y2="354" stroke="#EEF1F5"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg width="1000" height="720" viewBox="0 0 1000 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="720" fill="#F7F8FA"/>
+  <rect x="80" y="56" width="760" height="48" rx="6" fill="#FFFFFF" stroke="#AEB8C8"/>
+  <text x="104" y="86" fill="#7A8494" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">输入作业场景、对象、工序、风险点，检索相关标准</text>
+  <rect x="856" y="56" width="64" height="48" rx="6" fill="#2F6FED"/>
+  <text x="874" y="86" fill="white" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">检索</text>
+
+  <text x="80" y="138" fill="#5B6575" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif">当前有效标准 12836 条　最近周期更新时间：2026/8/12 15:30:00</text>
+  <text x="80" y="164" fill="#5B6575" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif">周期更新 · 已完成　新增现行 42　失效 7　失败 1</text>
+
+  <line x1="80" y1="246" x2="920" y2="246" stroke="#D8DEE8"/>
+  <text x="80" y="226" fill="#2F6FED" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">标准可视化</text>
+  <text x="202" y="226" fill="#3C4656" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">最新标准列表</text>
+  <line x1="80" y1="246" x2="168" y2="246" stroke="#2F6FED" stroke-width="3"/>
+
+  <rect x="80" y="266" width="840" height="362" rx="6" fill="#FCFCFD" stroke="#D8DEE8"/>
+  <line x1="124" y1="584" x2="884" y2="584" stroke="#E4E8F0"/>
+  <line x1="124" y1="306" x2="124" y2="584" stroke="#E4E8F0"/>
+  <g fill="#2F6FED" opacity="0.78">
+    <circle cx="240" cy="510" r="5"/><circle cx="260" cy="492" r="4"/><circle cx="282" cy="522" r="4"/><circle cx="220" cy="536" r="4"/><circle cx="302" cy="502" r="5"/>
+    <circle cx="430" cy="468" r="5"/><circle cx="456" cy="482" r="4"/><circle cx="478" cy="454" r="4"/><circle cx="408" cy="492" r="4"/><circle cx="492" cy="498" r="5"/>
+    <circle cx="650" cy="526" r="5"/><circle cx="674" cy="508" r="4"/><circle cx="700" cy="540" r="4"/><circle cx="622" cy="552" r="5"/><circle cx="720" cy="512" r="4"/>
+  </g>
+  <g fill="#16A085" opacity="0.72">
+    <circle cx="330" cy="438" r="4"/><circle cx="350" cy="420" r="4"/><circle cx="370" cy="446" r="5"/><circle cx="386" cy="426" r="4"/>
+    <circle cx="760" cy="462" r="5"/><circle cx="790" cy="444" r="4"/><circle cx="814" cy="474" r="5"/><circle cx="836" cy="450" r="4"/>
+  </g>
+  <g fill="#F2994A" opacity="0.76">
+    <circle cx="540" cy="560" r="4"/><circle cx="566" cy="542" r="5"/><circle cx="590" cy="570" r="4"/><circle cx="612" cy="548" r="4"/>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg width="1000" height="720" viewBox="0 0 1000 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="720" fill="#F7F8FA"/>
+  <rect x="28" y="58" width="36" height="36" rx="18" fill="#FFFFFF" stroke="#AEB8C8"/>
+  <path d="M48 70 41 76l7 6M41 76h14" stroke="#2F6FED" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="80" y="86" fill="#202631" font-size="26" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">标准名称示例一</text>
+  <rect x="258" y="61" width="148" height="34" rx="6" fill="#FFFFFF" stroke="#AEB8C8"/>
+  <image href="./std-logo.png" x="270" y="67" width="124" height="22" preserveAspectRatio="xMidYMid meet"/>
+  <text x="80" y="120" fill="#5B6575" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif">GB/T 0001 · 国家标准 · 发布时间 2026-07-01 · 实施时间 2026-08-01</text>
+
+  <line x1="80" y1="188" x2="920" y2="188" stroke="#D8DEE8"/>
+  <text x="80" y="168" fill="#2F6FED" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">overview.md</text>
+  <text x="214" y="168" fill="#3C4656" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">structure.md</text>
+  <text x="356" y="168" fill="#3C4656" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">logic.md</text>
+  <text x="470" y="168" fill="#3C4656" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">body.md</text>
+  <line x1="80" y1="188" x2="178" y2="188" stroke="#2F6FED" stroke-width="3"/>
+
+  <rect x="80" y="216" width="840" height="412" rx="6" fill="#FCFCFD" stroke="#D8DEE8"/>
+  <rect x="104" y="236" width="118" height="32" rx="6" fill="#F2F4F8" stroke="#D8DEE8"/>
+  <rect x="106" y="238" width="54" height="28" rx="5" fill="#FFFFFF" stroke="#C9D1DF"/>
+  <text x="122" y="257" fill="#2F6FED" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">视图</text>
+  <text x="174" y="257" fill="#5B6575" font-size="13" font-family="Arial, 'Microsoft YaHei', sans-serif">源码</text>
+
+  <rect x="866" y="236" width="32" height="32" rx="16" fill="#FFFFFF" stroke="#C9D1DF"/>
+  <rect x="877" y="246" width="10" height="12" rx="1.5" stroke="#5B6575" stroke-width="1.5"/>
+  <path d="M882 242h9c1 0 2 1 2 2v11" stroke="#5B6575" stroke-width="1.5" stroke-linecap="round"/>
+
+  <text x="104" y="314" fill="#202631" font-size="20" font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="700">标准概览</text>
+  <line x1="104" y1="338" x2="888" y2="338" stroke="#E4E8F0"/>
+  <text x="104" y="378" fill="#3C4656" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">适用范围：展示 overview.md 的渲染内容。</text>
+  <text x="104" y="414" fill="#3C4656" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">核心要求：按照 Markdown 标题、段落、表格和列表进行排版。</text>
+  <text x="104" y="450" fill="#3C4656" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">来源信息：保留标准号、类型、发布时间、实施时间和官网链接。</text>
+  <line x1="104" y1="482" x2="888" y2="482" stroke="#EEF1F5"/>
+  <text x="104" y="520" fill="#3C4656" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">一、范围</text>
+  <text x="126" y="554" fill="#5B6575" font-size="14" font-family="Arial, 'Microsoft YaHei', sans-serif">本标准规定了相关术语、分类、技术要求、试验方法和检验规则。</text>
+  <text x="104" y="590" fill="#3C4656" font-size="15" font-family="Arial, 'Microsoft YaHei', sans-serif">二、规范性引用文件</text>
+</svg>
