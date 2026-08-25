@@ -14,18 +14,18 @@ class Base(DeclarativeBase):
 
 
 def _require_postgresql_database_url() -> None:
-    if settings.database_url.startswith(POSTGRESQL_URL_PREFIXES):
+    if settings.standard_library_database_url.startswith(POSTGRESQL_URL_PREFIXES):
         return
     raise RuntimeError(
-        "DATABASE_URL must point to PostgreSQL because the standard search index requires pgvector. "
-        f"Current DATABASE_URL={settings.database_url!r}"
+        "STANDARD_LIBRARY_DATABASE_URL must point to PostgreSQL because the standard search index requires pgvector. "
+        f"Current STANDARD_LIBRARY_DATABASE_URL={settings.standard_library_database_url!r}"
     )
 
 
 _require_postgresql_database_url()
 
 engine = create_engine(
-    settings.database_url,
+    settings.standard_library_database_url,
     pool_pre_ping=True,
     pool_size=10,
     max_overflow=20,
@@ -38,11 +38,14 @@ SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False, futu
 def init_db() -> None:
     from app.models import entities  # noqa: F401
 
+    # Schema for this database is owned by init_standard_library_db(); the legacy
+    # migration statements below target the pre-split column names and would fail
+    # against the current schema.
     Base.metadata.create_all(bind=engine)
-    _migrate_postgresql_tables()
 
 
 def _migrate_postgresql_tables() -> None:
+    """Legacy pre-split migrations. No longer executed; kept for reference only."""
     statements = [
         "CREATE EXTENSION IF NOT EXISTS vector",
         "DROP TABLE IF EXISTS audio_chunks",

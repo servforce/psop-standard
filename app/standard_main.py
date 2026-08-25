@@ -10,14 +10,13 @@ from fastapi.staticfiles import StaticFiles
 
 from app.api import config, standard_library, standards
 from app.core.standard_config import standard_settings as settings
-from app.db.session import SessionLocal, init_db
+from app.db.session import init_db
 from app.db.standard_library import StandardLibrarySessionLocal, init_standard_library_db
 from app.jobs.standard_library_processing_worker import StandardLibraryProcessingWorker
 from app.jobs.standard_update_scheduler import StandardUpdateScheduler
 from app.services.standard_library_atlas import fail_interrupted_standard_library_atlas_jobs
 from app.services.standard_library_index import fail_interrupted_standard_library_index_jobs
 from app.services.standard_library_materialize import fail_interrupted_standard_library_materialize_jobs
-from app.services.standard_job_recovery import fail_interrupted_workbench_jobs
 from app.services.storage import storage_service
 
 
@@ -29,8 +28,7 @@ logging.getLogger("app").setLevel(logging.INFO)
 async def lifespan(app: FastAPI):
     init_db()
     init_standard_library_db()
-    with SessionLocal() as session:
-        counts = fail_interrupted_workbench_jobs(session)
+    counts: dict[str, int] = {}
     with StandardLibrarySessionLocal() as session:
         counts.update(fail_interrupted_standard_library_materialize_jobs(session))
     with StandardLibrarySessionLocal() as session:

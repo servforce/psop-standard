@@ -41,7 +41,7 @@ http://127.0.0.1:8091/
 应用入口：`app.standard_main:app`
 
 启动前需确保 PostgreSQL 已装 `pgvector`、`pgcrypto`、`pg_trgm` 扩展，并在 `.env` 中配好
-`DATABASE_URL`、`STANDARD_LIBRARY_DATABASE_URL`、MinIO 连接和 `MODEL_API_KEY`。
+`STANDARD_LIBRARY_DATABASE_URL`、MinIO 连接和 `MODEL_API_KEY`。
 
 ## 双接口说明
 
@@ -65,14 +65,15 @@ http://127.0.0.1:8091/
 ### `/api/standards` （旧接口）
 
 - **状态**：单体时期的遗留接口，包含更多管理功能，后台任务和工具脚本仍在使用
-- **数据库**：`DATABASE_URL` → `servforce_material_workbench` 库
+- **数据库**：与新接口共用 `STANDARD_LIBRARY_DATABASE_URL`（原先独立的 `DATABASE_URL` 已移除）
 - **模型**：`app/models/entities.py` (6 张表)
 - **功能**：标准采集、解析、索引重建、OpenSTD 爬取、周期更新等管理功能
 - **后续计划**：待后台任务迁移到新系统后逐步下线
 
-**架构说明**：新旧系统连不同的数据库，互不干扰。前端已切到新接口；后台工具和定时任务还在用旧接口，所以两套
-暂时并存。拆分过程中新系统复用了旧系统的部分通用能力（`app/services/standards.py` 里的 Qwen 生成器、
-embedding 客户端、提示词模板等），未来会抽成独立模块。
+**架构说明**：全项目只连一个数据库 `octopus_standard_library`。前端已切到新接口；后台工具和定时任务还在用旧
+接口，所以两套暂时并存。注意旧模型（`entities.py`）与新模型（`standard_library.py`）对 `standards` 等同名表
+的列定义不一致，旧接口的写操作在当前库上未经验证。拆分过程中新系统复用了旧系统的部分通用能力
+（`app/services/standards.py` 里的 Qwen 生成器、embedding 客户端、提示词模板等），未来会抽成独立模块。
 
 ## 功能与实现
 

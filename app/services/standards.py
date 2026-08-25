@@ -820,7 +820,7 @@ def vector_literal(values: list[float]) -> str:
 
 
 def is_postgresql_database() -> bool:
-    return settings.database_url.startswith("postgresql")
+    return settings.standard_library_database_url.startswith("postgresql")
 
 
 class StandardEmbeddingClient:
@@ -1265,7 +1265,7 @@ class StandardService:
 
     def index_standard(self, session: Session, standard_id: str) -> dict:
         if not is_postgresql_database():
-            raise ValueError("标准向量索引需要 PostgreSQL + pgvector，当前 DATABASE_URL 不是 PostgreSQL。")
+            raise ValueError("标准向量索引需要 PostgreSQL + pgvector，当前 STANDARD_LIBRARY_DATABASE_URL 不是 PostgreSQL。")
         standard = session.get(Standard, standard_id)
         if standard is None:
             raise ValueError(f"Standard not found: {standard_id}")
@@ -1356,7 +1356,7 @@ class StandardService:
 
     def rebuild_search_index(self, session: Session) -> dict:
         if not is_postgresql_database():
-            raise ValueError("标准向量索引需要 PostgreSQL + pgvector，当前 DATABASE_URL 不是 PostgreSQL。")
+            raise ValueError("标准向量索引需要 PostgreSQL + pgvector，当前 STANDARD_LIBRARY_DATABASE_URL 不是 PostgreSQL。")
         standards = self.current_effective_standards(session)
         indexed = []
         failed = []
@@ -1385,7 +1385,7 @@ class StandardService:
                 "mode": "pgvector_overview",
                 "matches": [],
                 "excluded": [],
-                "message": "标准向量检索需要 PostgreSQL + pgvector，当前 DATABASE_URL 不是 PostgreSQL。",
+                "message": "标准向量检索需要 PostgreSQL + pgvector，当前 STANDARD_LIBRARY_DATABASE_URL 不是 PostgreSQL。",
             }
         final_limit = max(1, min(limit, 20))
         embedding = StandardEmbeddingClient.from_settings().embed(clean_query)

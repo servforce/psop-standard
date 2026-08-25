@@ -14,7 +14,6 @@ from app.core.env import (
 @dataclass(frozen=True)
 class StandardSettings:
     app_env: str = "dev"
-    database_url: str = "postgresql+psycopg://postgres:postgres@127.0.0.1:5432/servforce_material_workbench"
     standard_library_database_url: str = (
         "postgresql+psycopg://postgres:postgres@127.0.0.1:5432/octopus_standard_library"
     )
@@ -114,10 +113,6 @@ class StandardSettings:
         qwen_text_api_key = env("QWEN_TEXT_API_KEY", "") or model_api_key
         return cls(
             app_env=env("APP_ENV", "dev"),
-            database_url=env(
-                "DATABASE_URL",
-                "postgresql+psycopg://postgres:postgres@127.0.0.1:5432/servforce_material_workbench",
-            ),
             standard_library_database_url=env(
                 "STANDARD_LIBRARY_DATABASE_URL",
                 "postgresql+psycopg://postgres:postgres@127.0.0.1:5432/octopus_standard_library",
