@@ -103,6 +103,24 @@ function setStandardMarkdownContent(markdown, options = {}) {
   applyStandardMarkdownView();
 }
 
+window.setStandardMarkdownView = (view) => {
+  const next = view === "source" ? "source" : "rendered";
+  standardLibraryState.detailMarkdownView = next;
+  state.standardMarkdownView = next;
+  applyStandardMarkdownView();
+};
+
+function applyStandardMarkdownView() {
+  const view = standardLibraryState.detailMarkdownView === "source" ? "source" : "rendered";
+  const rawTarget = document.getElementById("standardMarkdown");
+  const renderedTarget = document.getElementById("standardMarkdownRendered");
+  if (rawTarget) rawTarget.classList.toggle("hidden", view !== "source");
+  if (renderedTarget) renderedTarget.classList.toggle("hidden", view !== "rendered");
+  document.querySelectorAll("[data-standard-markdown-view]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.standardMarkdownView === view);
+  });
+}
+
 function renderMarkdownDocument(markdown) {
   const lines = normalizeMarkdownEntities(stripMarkdownFrontmatter(String(markdown || ""))).replace(/\r\n/g, "\n").split("\n");
   const blocks = [];
@@ -920,8 +938,8 @@ function renderStandardLibraryTable(items, options = {}) {
               <td>${Number(rank)}</td>
               <td>${escapeHtml(item.code || "")}</td>
               <td>${escapeHtml(item.name || item.standard_name || "")}</td>
-              <td>${escapeHtml(item.source_label || sourceLabel(item.source))}</td>
-              <td>${escapeHtml(item.category_label || item.category || "")}</td>
+              <td>${escapeHtml(sourceLabel(item.source))}</td>
+              <td>${escapeHtml(categoryLabel(item.source, item.category, item.category_label))}</td>
               <td>${escapeHtml(item.publish_date || "")}</td>
               <td>${escapeHtml(item.effective_date || "")}</td>
               ${showScore ? `<td><span class="standard-library-score">${Number(item.score || 0).toFixed(3)}</span></td>` : ""}
@@ -939,6 +957,17 @@ function sourceLabel(source) {
     industry: "行业标准",
     local: "地方标准",
   }[source] || source || "";
+}
+
+function categoryLabel(source, category, fallback) {
+  if (source === "national") {
+    return {
+      mandatory: "强制性国家标准",
+      recommended: "推荐性国家标准",
+      guidance: "指导性技术文件",
+    }[category] || fallback || category || "";
+  }
+  return fallback || category || "";
 }
 
 async function toggleStandardLibraryHistory(event) {
@@ -1056,7 +1085,7 @@ function renderStandardDetail(standard) {
         <div class="standard-library-detail-meta">
           ${escapeHtml(compactDetails([
             standard.code,
-            compactDetails([standard.source_label || sourceLabel(standard.source), standard.category_label || standard.category], " / "),
+            compactDetails([sourceLabel(standard.source), categoryLabel(standard.source, standard.category, standard.category_label)], " / "),
             standard.publish_date ? `发布时间 ${standard.publish_date}` : "",
             standard.effective_date ? `实施时间 ${standard.effective_date}` : "",
           ]))}

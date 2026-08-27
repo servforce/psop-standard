@@ -1,5 +1,7 @@
 # PSOP Standard Library Service
 
+PSOP Standard Library Service 是 PSOP 体系中的标准文档知识库服务，面向国家标准、行业标准、地方标准等技术标准资料的采集、存储、解析、索引和检索场景。项目负责从国家标准全文公开系统（https://openstd.samr.gov.cn/bzgk/std/）、行业标准信息服务平台（https://hbba.sacinfo.org.cn/）和地方标准信息服务平台（https://dbba.sacinfo.org.cn/）采集标准元数据和 PDF 文件，将原始文档整理为可阅读、可检索、可向量化的结构化内容，并通过 API 与前端页面提供标准目录浏览、标准详情查看、语义搜索、标准图谱和后台更新处理能力，帮助上层系统或用户更高效地管理和使用标准库资源。
+
 标准库 API 与前端服务。
 
 技术栈：FastAPI + PostgreSQL（pgvector）+ MinIO（S3 协议），前端为原生 HTML/CSS/JS。
